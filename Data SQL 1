@@ -1,0 +1,24 @@
+Create table Classes
+(
+ClassID int primary key identity(1,1) not null,
+Class varchar(50) not null,
+); 
+
+create table Univerisites 
+(
+UniID int primary key identity (1,1) not null,
+University varchar(50) not null,
+);
+
+Create table GenderInfo
+(
+GenderID int primary key identity(1,1) not null,
+Gender varchar(50) not null,
+);
+
+
+create table Cities 
+(
+CityID int primary key identity (1,1) not null,
+City varchar (50) not null,
+);
