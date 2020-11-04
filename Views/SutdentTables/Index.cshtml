@@ -1,0 +1,70 @@
+﻿@model IEnumerable<StudentRecordApp.SutdentTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class.Class)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GenderInfo.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Univerisite.University)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Class.Class)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GenderInfo.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Univerisite.University)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StudentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StudentID })
+        </td>
+    </tr>
+}
+
+</table>
